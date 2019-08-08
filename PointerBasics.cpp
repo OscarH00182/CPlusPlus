@@ -70,6 +70,35 @@ int main()
 	cout << "\nPass by Value: " << number << endl;
 	cout << "Pass by Refrence: " << numberTwo << endl;
 
+	int aa = 5;
+	cout << "\nPost Fix: " << aa++ << endl;
+	cout << "Post Fix: " << aa <<"\n"<< endl;
+
+	int num[5];
+	int * ptr_p2;//pointer called ptrp_p
+
+	ptr_p2 = num;	//ptr_p points at first element
+	*ptr_p2 = 1;		//Store the value 1
+
+	//cout << *ptr_p << endl; Value that pointer points too
+	//cout << ptr_p << endl; Pointer address
+
+	ptr_p2++;		//Increase to second element
+	*ptr_p2 = 2;		//Store the value 2
+
+	ptr_p2 = &num[2];	//Get addres of third element
+	*ptr_p2 = 3;		//Store the value 3
+
+	ptr_p2 = num + 3;	//Goto element 4
+	*ptr_p2 = 4;		//Store the value 4
+
+	ptr_p2 = num;	//Point at first element
+	*(ptr_p2 + 4) = 5;	//First goto element 5 and then store 5
+
+	//Now print value of each element
+	for (int i = 0; i < 5; i++)
+		cout << num[i] << '\n';
+
 	return 0;
 }
 
